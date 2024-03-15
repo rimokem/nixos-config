@@ -1,0 +1,142 @@
+font pango:Hackgen Console NF Regular 
+
+set $mod Mod4
+
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+b exec --no-startup-id vivaldi
+bindsym $mod+z exec --no-startup-id Thunar
+
+bindsym $mod+q kill 
+
+bindsym $mod+comma exec playerctl previous
+bindsym $mod+period exec playerctl play-pause
+bindsym $mod+slash exec playerctl next
+bindsym $mod+shift+comma exec playerctl --player playerctld position -10
+bindsym $mod+shift+slash exec playerctl --player playerctld position +10
+
+exec --no-startup-id fcitx5
+# exec --no-startup-id xfce4-power-manager
+exec --no-startup-id "feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg"
+exec --no-startup-id "xrandr --output HDMI-0 --mode 1920x1080 --rate 143.86"
+
+# ウィンドウフォーカス
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# ウィンドウ交換
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# 水平ウインドウ分割
+bindsym $mod+s split v
+
+# 垂直ウインドウ分割
+bindsym $mod+v split h
+
+# ウインドウの分割切り替え
+bindsym $mod+e layout toggle split
+
+bindsym $mod+f fullscreen toggle
+
+# ウインドウフロート
+bindsym $mod+w floating toggle
+
+# フロートウインドウフォーカス
+bindsym $mod+space focus mode_toggle
+
+floating_modifier $mod
+
+bindsym $mod+r mode "RESIZE"
+mode "RESIZE" {
+        bindsym h resize shrink width 10 px or 5 ppt
+        bindsym j resize grow height 10 px or 5 ppt
+        bindsym k resize shrink height 10 px or 5 ppt
+        bindsym l resize grow width 10 px or 5 ppt
+
+        # 通常モード遷移
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# ワークスペースの設定
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+
+bindsym $mod+Shift+e mode "SHUTDOWN SEQUENCE"
+mode "SHUTDOWN SEQUENCE"{
+    bindsym p exec "systemctl poweroff"
+    bindsym r exec "systemctl reboot"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Shift+e mode "default"
+}
+
+# 設定再読込み
+bindsym $mod+Shift+c reload
+
+# 再起動
+bindsym $mod+Shift+r restart
+
+# i3wm全体の色
+set $bg           #1C1E27
+set $fg           #CACACC
+set $darkred      #D95882
+set $red          #E4436F
+set $darkgreen    #68DDC4
+set $green        #24E39D
+set $darkyellow   #E8AEAA
+set $yellow       #EDA685
+set $darkblue     #64A4BF
+set $blue         #2095B4
+set $darkmagenta  #B382CF
+set $darkcyan     #54AEB8
+set $cyan         #00A5AF
+set $darkwhite    #CACACC
+set $white        #CACACA
+set $darkgrey     #6C6F93
+
+# フォーカスカラー
+# class                     border      background      text        indicator       child_border
+client.focused              $bg         $darkgrey       $fg         $yellow         $darkyellow
+client.unfocused            $bg         $bg             $fg         $yellow         $bg
+
+focus_follows_mouse no
+
+# ウインドウの枠の太さ
+for_window [class="^.*"] border pixel 2
+
+# ウインドウ間の隙間の広さ
+gaps top 6
+gaps bottom 6
+gaps right 6
+gaps left 6
+gaps inner 6
+
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
+bindsym $mod+x exec --no-startup-id "rofi -show run"
+
+exec --no-startup-id dunst
+exec --no-startup-id "picom -b"
+
+# polybarを起動
+exec_always --no-startup-id ~/.config/polybar/launch.sh
