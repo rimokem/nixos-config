@@ -21,6 +21,7 @@
 
     zscroll
     discord-canary
+    spotify
     freetube
     tldr
     ripgrep
