@@ -20,6 +20,8 @@
     vscode
 
     zscroll
+    discord
+    freetube
   ];
 
   programs = {
