@@ -25,7 +25,7 @@
           gtk.enable = true;
           x11.enable = true;
           name = name;
-          size = 48;
+          size = 24;
           package = 
             pkgs.runCommand "moveUp" {} ''
               mkdir -p $out/share/icons
@@ -43,7 +43,7 @@
 
   # set cursor size and dpi for 4k monitor
   # xresources.properties = {
-    # "Xcursor.size" = 16;
+    # "Xcursor.size" = 4;
     # "Xft.dpi" = 192;
   # };
 }

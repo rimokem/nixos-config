@@ -84,8 +84,5 @@
       viAlias = true;
       vimAlias = true;
     };
-    noisetorch = {
-      enable = true;
-    };
   };  
 }

@@ -22,6 +22,8 @@
     zscroll
     discord-canary
     freetube
+    tldr
+    ripgrep
   ];
 
   programs = {
