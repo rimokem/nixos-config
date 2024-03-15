@@ -10,7 +10,6 @@ in {
     isNormalUser = true;
     description = "kento";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.nushell;
   };
   
   nix.settings = {
