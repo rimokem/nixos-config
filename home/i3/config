@@ -15,6 +15,7 @@ bindsym $mod+shift+comma exec playerctl --player playerctld position -10
 bindsym $mod+shift+slash exec playerctl --player playerctld position +10
 
 exec --no-startup-id fcitx5
+exec --no-startup-id pipewire
 # exec --no-startup-id xfce4-power-manager
 exec --no-startup-id "feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg"
 exec --no-startup-id "xrandr --output HDMI-0 --mode 1920x1080 --rate 143.86"
