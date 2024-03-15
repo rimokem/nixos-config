@@ -5,6 +5,11 @@
     # envFile.source = ./env.nu;
   };
 
+  programs.carapace = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
