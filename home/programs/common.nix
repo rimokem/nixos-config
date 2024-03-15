@@ -20,7 +20,7 @@
     vscode
 
     zscroll
-    discord
+    discord-canary
     freetube
   ];
 
