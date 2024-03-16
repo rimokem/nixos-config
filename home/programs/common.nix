@@ -25,6 +25,7 @@
     freetube
     tldr
     ripgrep
+    fd
     unityhub
   ];
 
