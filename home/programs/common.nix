@@ -25,6 +25,7 @@
     freetube
     tldr
     ripgrep
+    unityhub
   ];
 
   programs = {
