@@ -24,6 +24,7 @@
     spotify
     freetube
     tldr
+    just
     ripgrep
     fd
     unityhub
