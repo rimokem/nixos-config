@@ -13,7 +13,7 @@ debug:
   nixos-rebuild switch --flake . --use-remote-sudo --show-trace --verbose
 
 up:
-  nix flake update
+  sudo nix flake update
 
 # Update specific input
 # usage: make upp i=home-manager
