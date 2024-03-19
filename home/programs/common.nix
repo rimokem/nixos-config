@@ -20,14 +20,10 @@
     vscode
 
     zscroll
-    discord-canary
-    spotify
-    freetube
     tldr
     just
     ripgrep
     fd
-    vmpk
     unityhub
   ];
 
