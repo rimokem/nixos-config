@@ -67,6 +67,7 @@ mode "RESIZE" {
         bindsym $mod+r mode "default"
 }
 
+
 # ワークスペースの設定
 set $ws1 "1"
 set $ws2 "2"
@@ -138,6 +139,7 @@ gaps inner 6
 
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $mod+x exec --no-startup-id "rofi -show run"
+bindsym $mod+Shift+p exec --no-startup-id "rofi -show p -modi p:~/.config/polybar/scripts/rofi-power-menu"
 
 exec --no-startup-id dunst
 exec --no-startup-id "picom -b"
