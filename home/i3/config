@@ -8,11 +8,15 @@ bindsym $mod+z exec --no-startup-id Thunar
 
 bindsym $mod+q kill 
 
+# オーディオ設定
 bindsym $mod+comma exec playerctl previous
 bindsym $mod+period exec playerctl play-pause
 bindsym $mod+slash exec playerctl next
 bindsym $mod+shift+comma exec playerctl --player playerctld position -10
 bindsym $mod+shift+slash exec playerctl --player playerctld position +10
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+ 
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%- 
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle 
 
 exec --no-startup-id fcitx5
 # exec --no-startup-id xfce4-power-manager
