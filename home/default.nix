@@ -5,7 +5,7 @@
     ./fcitx5
     ./i3
     ./programs
-    # ./rofi
+    ./rofi
     ./shell
   ];
 
