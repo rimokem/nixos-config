@@ -137,7 +137,7 @@ gaps right 6
 gaps left 6
 gaps inner 6
 
-bindsym $mod+d exec --no-startup-id "rofi -modi drun -show drun -config/rofi/rofidmenu.rasi"
+bindsym $mod+d exec --no-startup-id "rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi"
 bindsym $mod+x exec --no-startup-id "rofi -show run"
 bindsym $mod+Shift+p exec --no-startup-id "rofi -show p -modi p:~/.config/polybar/scripts/rofi-power-menu"
 
