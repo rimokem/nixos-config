@@ -27,6 +27,7 @@
     just
     ripgrep
     fd
+    vmpk
     unityhub
   ];
 

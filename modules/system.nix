@@ -93,7 +93,6 @@ in {
     wget
     git
     xfce.thunar
-    reaper
   ];
 
   # Enable sound with pipewire.
