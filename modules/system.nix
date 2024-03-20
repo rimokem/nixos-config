@@ -85,6 +85,17 @@ in {
     openFirewall = true;
   };
 
+  # Enable Docker
+  virtualisation = {
+    docker = {
+      enable = true;
+      rootless = {
+        enable = true;
+	setSocketVariable = true;
+      };
+    };
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
