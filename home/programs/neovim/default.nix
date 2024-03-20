@@ -9,7 +9,11 @@
     viAlias = true;
   };
 
-  home.packages = with pkgs; [gcc9];
+  home.packages = with pkgs;
+    [
+      gcc9
+      lazygit
+    ];
 
   home.file.".config/nvim" = {
     source = ./nvim;
