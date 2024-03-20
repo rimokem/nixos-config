@@ -13,6 +13,8 @@
     [
       gcc9
       lazygit
+      xclip
+      xsel
     ];
 
   home.file.".config/nvim" = {
