@@ -75,9 +75,6 @@
   system.stateVersion = "23.11"; # Did you read the comment?
 
   programs = {
-    git = {
-      enable = true;
-    };
     neovim = {
       enable = true;
       defaultEditor = true;
