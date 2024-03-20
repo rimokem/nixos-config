@@ -25,6 +25,7 @@
     ripgrep
     fd
     unityhub
+    dotnet-sdk_8
   ];
 
   programs = {
