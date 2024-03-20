@@ -6,8 +6,9 @@
 }: {
   home.packages = with pkgs; [
     discord-canary
-    spotify
     freetube
+    spotify
+    todoist-electron
     vmpk
   ];
 }
