@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   lib,
   ...
@@ -72,7 +73,17 @@ in {
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  networking.firewall.enable = true;
+  networking.firewall = {
+    enable = true;
+    trustedInterfaces = ["tailscale0"];
+    allowedUDPPorts = [config.services.tailscale.port];
+  };
+
+  # Enable tailscale
+  services.tailscale = {    
+    enable = true;
+    openFirewall = true;
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh = {
@@ -104,6 +115,7 @@ in {
     wget
     git
     xfce.thunar
+    tailscale
   ];
 
   # Enable sound with pipewire.
