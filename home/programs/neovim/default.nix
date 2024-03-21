@@ -7,6 +7,9 @@
     enable = true;
     vimAlias = true;
     viAlias = true;
+    plugins = with pkgs.vimPlugins; [
+      telescope-fzf-native-nvim
+    ];
   };
 
   home.packages = with pkgs;
