@@ -27,6 +27,7 @@
     unityhub
     dotnet-sdk_8
     gamescope #SteamOS session compositing window manager
+    ncspot
   ];
 
   programs = {
