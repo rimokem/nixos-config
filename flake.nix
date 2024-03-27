@@ -9,10 +9,10 @@
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      kento = nixpkgs.lib.nixosSystem {
+      desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts
+          ./hosts/desktop
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
