@@ -9,6 +9,9 @@
 deploy:
   nixos-rebuild switch --flake .#desktop --use-remote-sudo
 
+deploy2:
+  nixos-rebuild switch --flake .#gakka --use-remote-sudo --show-trace
+
 debug:
   nixos-rebuild switch --flake . --use-remote-sudo --show-trace --verbose
 
