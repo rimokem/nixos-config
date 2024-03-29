@@ -18,6 +18,8 @@ def "main down" [n: int] {
 }
 
 def "main mute" [] {
+  let data = wpctl get-volume @DEFAULT_SINK@ | str trim -c "\n" | split row " "
+  let vol = $data.1 | into float | $in * 100 | into int | into string | $in + '%'
   wpctl set-mute @DEFAULT_SINK@ toggle | null
-  "MUTED"
+  if '[MUTED]' in $data { vol } else { "MUTED" }
 }
