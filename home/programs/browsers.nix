@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  home.packages = [pkgs.vivaldi];
+  home.packages = with pkgs;[vivaldi google-chrome];
   programs = {
     firefox = {
       enable = true;
