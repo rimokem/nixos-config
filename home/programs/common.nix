@@ -12,6 +12,7 @@
     # misc
     xdg-utils
     graphviz
+    bottom
 
     # productivity
     obsidian
