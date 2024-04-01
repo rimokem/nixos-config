@@ -101,7 +101,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [class="spotify"] workspace 10
+assign [class="Spotify"] workspace $ws10
 
 bindsym $mod+Shift+e mode "SHUTDOWN SEQUENCE"
 mode "SHUTDOWN SEQUENCE"{
