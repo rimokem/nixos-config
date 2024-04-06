@@ -13,6 +13,7 @@
     xdg-utils
     graphviz
     bottom
+    rclone
 
     # productivity
     obsidian
