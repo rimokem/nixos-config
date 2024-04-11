@@ -15,6 +15,8 @@
     pulsemixer
     # images
     imv
+    # videos
+    vlc
   ];
 
   programs = {

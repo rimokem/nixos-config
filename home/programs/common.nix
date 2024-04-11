@@ -32,6 +32,7 @@
     ncspot
     wgnord
     yt-dlp
+    zathura
   ];
 
   programs = {
