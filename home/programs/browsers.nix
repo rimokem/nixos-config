@@ -7,7 +7,7 @@
   programs = {
     firefox = {
       enable = true;
-      profiles.ryan = {};
+      profiles.kento = {};
     };
   };
 }
