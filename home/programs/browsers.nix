@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  home.packages = with pkgs;[vivaldi google-chrome];
+  home.packages = with pkgs;[vivaldi librewolf];
   programs = {
     firefox = {
       enable = true;
