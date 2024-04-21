@@ -28,7 +28,6 @@
     fd
     gamescope #SteamOS session compositing window manager
     ncspot
-    wgnord
     yt-dlp
   ];
 
