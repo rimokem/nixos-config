@@ -10,7 +10,7 @@ in {
   users.users.kento = {
     isNormalUser = true;
     description = "kento";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "realtime"];
   };
   
   nix.settings = {
