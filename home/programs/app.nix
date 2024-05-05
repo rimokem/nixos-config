@@ -14,5 +14,6 @@
     spotify
     todoist-electron
     vmpk
+    zoom-us
   ];
 }
