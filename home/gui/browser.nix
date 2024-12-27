@@ -1,9 +1,10 @@
 {
+  inputs,
   pkgs,
   config,
   ...
 }: {
-  home.packages = with pkgs;[vivaldi brave];
+  home.packages = with pkgs;[brave];
   programs = {
     firefox = {
       enable = true;

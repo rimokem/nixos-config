@@ -1,5 +1,5 @@
 {pkgs, config, ...}: let
-  browser = ["vivaldi-stable.desktop"];
+  browser = ["brave.desktop"];
 
   # XDG MIME types
   associations = {
@@ -44,4 +44,5 @@ in {
       };
     };
   };
+  home.packages = with pkgs; [xdg-utils];
 }

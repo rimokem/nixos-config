@@ -9,13 +9,22 @@
 
   imports =
     [ 
-      ../../modules/system.nix
-      ../../modules/i3.nix
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      ../../modules/core
+      ../../modules/desktop
+      ../../modules/programs/i3.nix
+      ../../modules/programs/shell.nix
+      # ../../modules/programs/steam.nix
     ];
 
-  # Bootloader.
+  users.users.kento = {
+    isNormalUser = true;
+    description = "kento";
+    extraGroups = [ "networkmanager" "wheel" "realtime"];
+  };
+
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
@@ -26,45 +35,12 @@
     };
   };
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
   services.xserver.videoDrivers = ["nvidia"];
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     modesetting.enable = true;
   };
-
-  # bluetooth
-  hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-    };
-  };
-  services.blueman.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -73,13 +49,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
-  programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-    };
-  };  
 }

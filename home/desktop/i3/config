@@ -1,6 +1,6 @@
 font pango:Hackgen Console NF Regular 
 
-set $mod Mod4
+set $mod Mod1
 
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+b exec --no-startup-id vivaldi

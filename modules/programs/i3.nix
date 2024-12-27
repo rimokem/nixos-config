@@ -12,6 +12,9 @@
     desktopManager = {
       xterm.enable = false;
     };
+    
+    autoRepeatDelay = 300;
+    autoRepeatInterval = 30;
 
     displayManager = {
         # defaultSession = "none+i3";

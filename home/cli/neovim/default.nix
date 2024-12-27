@@ -3,15 +3,6 @@
   config,
   ...
 }: {
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    viAlias = true;
-    plugins = with pkgs.vimPlugins; [
-      telescope-fzf-native-nvim
-    ];
-  };
-
   home.packages = with pkgs;
     [
       gcc9
@@ -26,3 +17,4 @@
     executable = true;
   };
 }
+

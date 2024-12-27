@@ -2,11 +2,9 @@
 
 {
   imports = [
-    ./fcitx5
-    ./i3
-    ./programs
-    ./rofi
-    ./shell
+    ./cli
+    ./desktop
+    ./gui
   ];
 
   home = {

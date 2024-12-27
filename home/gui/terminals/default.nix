@@ -24,10 +24,6 @@ in
         italic.family = font;
         size = 13;
       };
-
-      shell = {
-        program = /etc/profiles/per-user/kento/bin/nu;
-      };
     };
   };
 }

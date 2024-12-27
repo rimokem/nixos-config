@@ -1,19 +1,12 @@
 
+{pkgs, ...}: 
 {
-  lib,
-  pkgs,
-  ...
-}: {
   home.packages = with pkgs; [
-    discord-canary
+    discord
     freetube
     gimp
-    guitarix
-    libsForQt5.okular
     slack
-    spotify
     todoist-electron
-    vmpk
     zoom-us
   ];
 }

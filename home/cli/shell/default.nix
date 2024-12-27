@@ -5,8 +5,6 @@
 in {
   imports = [
     ./nushell
-    ./terminals
-    # ./common.nix
     ./starship.nix
   ];
 

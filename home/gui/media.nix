@@ -17,6 +17,8 @@
     imv
     # videos
     vlc
+    # music
+    spotify
   ];
 
   programs = {
@@ -25,11 +27,11 @@
       defaultProfiles = ["gpu-hq"];
       scripts = [pkgs.mpvScripts.mpris];
     };
-
     obs-studio.enable = true;
   };
 
   services = {
     playerctld.enable = true;
+    easyeffects.enable = true;
   };
 }
