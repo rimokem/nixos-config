@@ -18,16 +18,12 @@
     # productivity
     obsidian
 
-    # IDE
-    vscode
-
     zscroll
-    tldr
+    tlrc
     just
     ripgrep
     fd
     gamescope #SteamOS session compositing window manager
-    ncspot
     yt-dlp
   ];
 
@@ -55,9 +51,6 @@
 
     bash.enable = true;
 
-    btop.enable = true; # replacement of htop/nmon
-    eza.enable = true; # A modern replacement for ‘ls’
-    jq.enable = true; # A lightweight and flexible command-line JSON processor
     ssh.enable = true;
     aria2.enable = true;
 

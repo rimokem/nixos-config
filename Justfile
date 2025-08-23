@@ -7,27 +7,13 @@
 ############################################################################
 
 deploy:
-  nixos-rebuild switch --flake .#desktop --use-remote-sudo
-
-deploy2:
-  nixos-rebuild switch --flake .#gakka --use-remote-sudo --show-trace
+  nixos-rebuild switch --flake .#desktop --sudo
 
 debug:
   nixos-rebuild switch --flake . --use-remote-sudo --show-trace --verbose
 
 up:
   sudo nix flake update
-
-# Update specific input
-# usage: make upp i=home-manager
-upp:
-  nix flake lock --update-input $(i)
-
-history:
-  nix profile history --profile /nix/var/nix/profiles/system
-
-repl:
-  nix repl -f flake:nixpkgs
 
 clean:
   # remove all generations older than 7 days

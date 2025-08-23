@@ -5,7 +5,6 @@
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-emoji
-      nerdfonts
       hackgen-nf-font
       wqy_zenhei # Need by steam for Chinese
     ];

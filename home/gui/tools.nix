@@ -1,12 +1,25 @@
 
-{pkgs, ...}: 
+{pkgs, ...}:
 {
   home.packages = with pkgs; [
     discord
-    freetube
     gimp
-    slack
-    todoist-electron
-    zoom-us
   ];
+
+  programs.zed-editor = {
+     enable = true;
+     extensions = [
+       "nix"
+       "toml"
+     ];
+     userSettings = {
+       theme = {
+         mode = "dark";
+         light = "One Light";
+         dark = "One Dark";
+       };
+       vim_mode = true;
+       buffer_font_family = "HackGen Console NF";
+     };
+   };
 }

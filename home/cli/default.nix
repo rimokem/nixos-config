@@ -1,7 +1,6 @@
 {
   imports = [
     ./shell
-    ./neovim
     ./git.nix
     ./tools.nix
     # ./development.nix

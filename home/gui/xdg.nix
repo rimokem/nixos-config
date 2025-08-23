@@ -1,5 +1,5 @@
 {pkgs, config, ...}: let
-  browser = ["brave.desktop"];
+  browser = ["firefox.desktop"];
 
   # XDG MIME types
   associations = {
@@ -22,7 +22,7 @@
     "image/*" = ["imv.desktop"];
     "application/json" = browser;
     "application/pdf" = ["org.kde.okular.desktop"];
-    "x-scheme-handler/discord" = ["discordcanary.desktop"];
+    "x-scheme-handler/discord" = ["discord.desktop"];
     "x-scheme-handler/spotify" = ["spotify.desktop"];
     "x-scheme-handler/tg" = ["telegramdesktop.desktop"];
   };

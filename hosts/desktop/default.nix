@@ -19,9 +19,9 @@
       # ../../modules/programs/steam.nix
     ];
 
-  users.users.kento = {
+  users.users.rimokem = {
     isNormalUser = true;
-    description = "kento";
+    description = "riomkem";
     extraGroups = [ "networkmanager" "wheel" "realtime"];
   };
 
@@ -38,6 +38,7 @@
   services.xserver.videoDrivers = ["nvidia"];
   hardware.graphics.enable = true;
   hardware.nvidia = {
+    open = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     modesetting.enable = true;
   };
@@ -48,5 +49,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }

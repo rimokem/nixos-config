@@ -18,7 +18,7 @@ in {
     # set default applications
     EDITOR = "vim";
     BROWSER = "firefox";
-    TERMINAL = "alacritty";
+    TERMINAL = "ghostty";
 
     # enable scrolling in git diff
     DELTA_PAGER = "less -R";
