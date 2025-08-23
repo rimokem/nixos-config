@@ -8,15 +8,10 @@
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
 
   imports =
-    [ 
+    [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-
-      ../../modules/core
-      ../../modules/desktop
-      ../../modules/programs/i3.nix
-      ../../modules/programs/shell.nix
-      # ../../modules/programs/steam.nix
+      ../modules
     ];
 
   users.users.rimokem = {

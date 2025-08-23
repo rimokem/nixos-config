@@ -16,7 +16,7 @@
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/desktop
+          ./desktop
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
