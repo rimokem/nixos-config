@@ -2,9 +2,13 @@
 
 {
   imports = [
-    ./cli
-    ./desktop
-    ./gui
+    ./i3
+    ./packages.nix
+    ./programs.nix
+    ./services.nix
+    ./shell.nix
+    ./gtk.nix
+    ./xdg.nix
   ];
 
   home = {

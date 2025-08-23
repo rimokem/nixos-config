@@ -10,13 +10,4 @@
       vimAlias = true;
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    acpi
-    bottom
-    btrfs-progs
-    duf
-    lsof
-    pciutils
-  ];
 }

@@ -3,11 +3,6 @@
   c = config.xdg.configHome;
   cache = config.xdg.cacheHome;
 in {
-  imports = [
-    ./nushell
-    ./starship.nix
-  ];
-
   # add environment variables
   home.sessionVariables = {
     # clean up ~
@@ -24,6 +19,7 @@ in {
     DELTA_PAGER = "less -R";
 
     MANPAGER = "sh -c 'col -bx | bat -l man -p'";
+    STARSHIP_CACHE = "${config.xdg.cacheHome}/starship";
   };
 
   home.shellAliases = {
