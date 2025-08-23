@@ -23,6 +23,6 @@ in {
   };
 
   home.shellAliases = {
-    k = "kubectl";
+    zed = "zeditor";
   };
 }
