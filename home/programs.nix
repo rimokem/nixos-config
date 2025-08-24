@@ -24,10 +24,18 @@
 
     starship = {
       enable = true;
-      enableBashIntegration = true;
+      enableZshIntegration = true;
     };
 
-    bash.enable = true;
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      shellAliases = {
+        zed = "zeditor";
+      };
+    };
 
     #--------------------------------------------------------------------------
     # 開発ツール

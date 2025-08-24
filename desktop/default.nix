@@ -18,6 +18,7 @@
     isNormalUser = true;
     description = "riomkem";
     extraGroups = ["networkmanager" "wheel" "realtime"];
+    shell = pkgs.zsh;
   };
 
   boot.loader = {
