@@ -61,6 +61,7 @@
       extensions = [
         "nix"
         "toml"
+	"astro"
       ];
       userSettings = {
         theme = {
@@ -71,6 +72,11 @@
         vim_mode = true;
         buffer_font_family = "PlemolJP Console NF";
       };
+    };
+
+    vscode = {
+      enable = true;
+      package = pkgs.vscode.fhs;
     };
 
     #--------------------------------------------------------------------------
