@@ -49,7 +49,7 @@
     obsidian
 
     # コミュニケーション
-    discord
+    vesktop
 
     # グラフィック
     gimp
