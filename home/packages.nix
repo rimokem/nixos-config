@@ -21,6 +21,7 @@
     bottom # システムモニター
     yazi # ターミナル用ファイルマネージャー
     yt-dlp # 動画ダウンローダー
+    xclip
     nushell
     bun
 
