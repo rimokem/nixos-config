@@ -69,7 +69,7 @@
           dark = "One Dark";
         };
         vim_mode = true;
-        buffer_font_family = "HackGen Console NF";
+        buffer_font_family = "PlemolJP Console NF";
       };
     };
 

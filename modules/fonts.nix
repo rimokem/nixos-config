@@ -9,6 +9,7 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
       hackgen-nf-font
+      plemoljp-nf
       wqy_zenhei # Need by steam for Chinese
     ];
     fontDir.enable = true;
@@ -16,7 +17,7 @@
       defaultFonts = {
         serif = ["Noto Serif CJK JP" "Noto Color Emoji"];
         sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
-        monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
+        monospace = ["HackGen Console NF" "Noto Color Emoji"];
         emoji = ["Noto Color Emoji"];
       };
     };
