@@ -1,23 +1,23 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
 
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../modules
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../modules
+  ];
 
   users.users.rimokem = {
     isNormalUser = true;
     description = "riomkem";
-    extraGroups = [ "networkmanager" "wheel" "realtime"];
+    extraGroups = ["networkmanager" "wheel" "realtime"];
   };
 
   boot.loader = {

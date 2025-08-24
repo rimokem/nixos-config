@@ -1,4 +1,8 @@
-{pkgs, config, ...}: let
+{
+  pkgs,
+  config,
+  ...
+}: let
   browser = ["zen-beta.desktop"];
 
   # XDG MIME types

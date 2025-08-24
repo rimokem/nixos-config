@@ -17,9 +17,13 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: let
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    ...
+  }: let
     system = "x86_64-linux";
-  in  {
+  in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
