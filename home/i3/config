@@ -19,8 +19,8 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
 
 exec --no-startup-id fcitx5
+exec --no-startup-id "xrandr --output HDMI-0 --mode 1920x1080 --rate 143.98 --rotate left --pos 0x0 --output DP-1 --mode 1920x1080 --primary --rate 143.86 --rotate normal --pos 1080x840"
 exec --no-startup-id "feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg"
-exec --no-startup-id "xrandr --output HDMI-0 --mode 1920x1080 --rate 143.86"
 
 # ウィンドウフォーカス
 bindsym $mod+h focus left

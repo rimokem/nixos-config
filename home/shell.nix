@@ -11,7 +11,6 @@ in {
     # WINEPREFIX = d + "/wine";
 
     # set default applications
-    EDITOR = "vim";
     BROWSER = "zen-beta";
     TERMINAL = "ghostty";
 

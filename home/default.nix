@@ -9,6 +9,7 @@
     ./shell.nix
     ./gtk.nix
     ./xdg.nix
+    ./nixvim.nix
   ];
 
   home = {
