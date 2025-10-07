@@ -7,7 +7,7 @@
       enable = true;
       enableZshIntegration = true;
       settings = {
-        theme = "tokyonight";
+        theme = "TokyoNight";
         font-family = "HackGen Console NF";
         font-size = 13;
         gtk-titlebar = false;

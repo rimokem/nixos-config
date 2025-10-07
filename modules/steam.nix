@@ -1,3 +1,4 @@
+{ pkgs, ...}:
 {
   # https://github.com/fufexan/dotfiles/blob/483680e/system/programs/steam.nix
   # https://wiki.archlinux.org/title/steam

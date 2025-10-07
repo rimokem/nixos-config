@@ -13,6 +13,6 @@
     ./nix.nix
     ./shell.nix
     ./sound.nix
-    # ./steam.nix
+    ./steam.nix
   ];
 }
